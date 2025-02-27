@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0  data-theme=" light"">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payoo-lite</title>
     <!-- Daisy ui  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -33,13 +33,15 @@
                             <label class="label">
                                 <span class="label-text">Account number</span>
                             </label>
-                            <input type="number" placeholder="A/C Number" class="input input-bordered" required />
+                            <input value="01301301302" id="account-number" type="number" placeholder="A/C Number"
+                                class="input input-bordered bg-white" required />
                         </div>
                         <div class="form-control">
                             <label class="label">
                                 <span class="label-text">PIN</span>
                             </label>
-                            <input type="text" placeholder="PIN" class="input input-bordered" required />
+                            <input value="1234" id="pin" type="text" placeholder="4 Digit PIN"
+                                class="input input-bordered bg-white" required />
                             <label class="label">
                                 <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                             </label>
