@@ -15,10 +15,13 @@
         <header>
             <nav class="flex justify-around items-center text-black">
                 <img src="./assets/Group.png" alt="" srcset="" class="w-16">
-                <div class="">
-                    <h1 class="text-3xl font-bold text-black">$ 4500</h1>
+                <!-- ========================================================================= MAIN BALANCE IS HERE-->
+                
+                <div class="" id="">
+                    <h1 class="text-3xl font-bold text-black">$<span id="main-balance">4500</span></h1>
                     <p class="border rounded p-1">Available balance</p>
                 </div>
+                
                 <button class="btn" id="">Logout</button>
             </nav>
             <section>
@@ -30,11 +33,11 @@
 
                     <!-- ---------1st Box---------- -->
 
-                    <div class="box border cursor-pointer border-black p-4 text-center rounded-lg">
+                    <div id="add-money-box" class="box border cursor-pointer border-black p-4 text-center rounded-lg">
                         <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="" srcset="">
                         <h3>Add money</h3>
                     </div>
-                    <div class="box border cursor-pointer border-black p-4 text-center rounded-lg">
+                    <div id="cashout-box" class="box border cursor-pointer border-black p-4 text-center rounded-lg">
                         <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="" srcset="">
                         <h3>Cash Out</h3>
                     </div>
@@ -62,8 +65,8 @@
 
 
                 </div>
-
-                <section class="mt-10">
+                <!-- ==============================ADD MONEY=============================== -->
+                <section class="mt-10" id="add-money">
                     <h2 class="ml-5 font-bold font-4xl text-blue-700">Add money</h2>
 
                     <div class="">
@@ -72,20 +75,28 @@
                             <form class="card-body">
                                 <legend>Select bank</legend>
                                 <select class="select">
-                                    <option disabled selected>Select a payment way</option>
-                                    <option value="Gpay">Gpay</option>
-                                    <option value="Phone-Pay">Phone Pay</option>
-                                    <option value="BHIM">BHIM</option>
-                                    <option value="Amazon">Amazon</option>
-                                    <option value="CRED">CRED</option>
+                                    <option disabled selected>Select a Bank</option>
+                                    <option value="SBI">SBI</option>
+                                    <option value="HDFC">HDFC</option>
+                                    <option value="Axis">Axis</option>
+                                    <option value="Bandhan">Bandhan</option>
+
                                 </select>
                                 <div class="form-control">
+                                    <!-- Account Number -->
                                     <label class="label">
                                         <span class="label-text">Account number</span>
                                     </label>
                                     <input value="01301301302" id="account-number" type="number"
                                         placeholder="A/C Number" class="input input-bordered bg-white" required />
+                                    <!-- Amount -->
+                                    <label class="label">
+                                        <span class="label-text">Amount</span>
+                                    </label>
+                                    <input value="" id="amount" type="number" placeholder="Type Your Amount"
+                                        class="input input-bordered bg-white" required />
                                 </div>
+                                <!-- pin number -->
                                 <div class="form-control">
                                     <label class="label">
                                         <span class="label-text">PIN</span>
@@ -97,16 +108,53 @@
                                     </label>
                                 </div>
                                 <div class="form-control mt-6">
-                                    <button class="btn border-none btn-primary bhg-blue-700">Add Money</button>
+                                    <button id="add-money-btn" class="btn border-none btn-primary bhg-blue-700">Add
+                                        Money</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                     </div>
                 </section>
+                <!-- ==============================CASH OUT SECTION=============================== -->
+                <section id="cashOut">
+                    <h2 class="">Cash Out</h2>
+                    <div class="form-control">
+                        <!-- Account Number -->
+                        <label class="label">
+                            <span class="label-text">Account number</span>
+                        </label>
+                        <input value="01301301302" id="account-number" type="number" placeholder="A/C Number"
+                            class="input input-bordered bg-white" required />
+                        <!-- Amount -->
+                        <label class="label">
+                            <span class="label-text">Amount</span>
+                        </label>
+                        <input value="" id="cashout-amount" type="number" placeholder="Type Your Amount"
+                            class="input input-bordered bg-white" required />
+                    </div>
+                    <!-- pin number -->
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">PIN</span>
+                        </label>
+                        <input value="1234" id="cashout-pin" type="text" placeholder="4 Digit PIN"
+                            class="input input-bordered bg-white" required />
+                        <label class="label">
+                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                        </label>
+                    </div>
+                    <div class="form-control mt-6">
+                        <button id="cashOut-btn" class="btn border-none btn-primary bhg-blue-700">Cashout</button>
+                    </div>
+                </section>
             </section>
         </header>
     </section>
+    <!-- add money js file -->
+    <script src="./Script/addMoney.js"></script>
+    <script src="./Script/toggle.js"></script>
+    <script src="./Script/cashout.js"></script>
 </body>
 
 </html>
